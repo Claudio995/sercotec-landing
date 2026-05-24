@@ -1,0 +1,104 @@
+{
+  "servicios": [
+    {
+      "id": 1,
+      "titulo": "Acompañamiento Preventivo",
+      "descripcion": "Asesorías periódicas para prolongar la vida útil de tu negocio y aumentar la productividad mediante planes de mejora continuos.",
+      "imagen": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80"
+    },
+    {
+      "id": 2,
+      "titulo": "Gestión Financiera",
+      "descripcion": "Orientación especializada en administración y finanzas para fortalecer la sostenibilidad económica de tu empresa.",
+      "imagen": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80"
+    },
+    {
+      "id": 3,
+      "titulo": "Marketing Digital",
+      "descripcion": "Estrategias digitales para posicionar tu negocio, ampliar tu alcance y conectar con nuevos clientes en el entorno online.",
+      "imagen": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=400&q=80"
+    },
+    {
+      "id": 4,
+      "titulo": "Innovación y Procesos",
+      "descripcion": "Talleres especializados e implementación de herramientas digitales para optimizar tus procesos internos.",
+      "imagen": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80"
+    },
+    {
+      "id": 5,
+      "titulo": "Vinculación Empresarial",
+      "descripcion": "Acceso a redes de networking, instituciones públicas y programas de financiamiento para potenciar tu crecimiento.",
+      "imagen": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80"
+    },
+    {
+      "id": 6,
+      "titulo": "Acompañamiento Correctivo",
+      "descripcion": "Resolución de dificultades y desafíos que afecten la gestión o el desarrollo de tu empresa con asesores especializados.",
+      "imagen": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    }
+  ],
+  "testimonios": [
+    {
+      "id": 1,
+      "nombre": "María González",
+      "empresa": "Tienda El Rincón",
+      "cargo": "Propietaria",
+      "texto": "Gracias al Centro de Negocios logré ordenar mis finanzas y duplicar mis ventas en solo 6 meses.",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos Muñoz",
+      "empresa": "Panadería Don Carlos",
+      "cargo": "Gerente General",
+      "texto": "El acompañamiento fue clave para digitalizarnos y llegar a nuevos clientes a través de redes sociales.",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "nombre": "Ana Martínez",
+      "empresa": "Boutique Ana M.",
+      "cargo": "Fundadora",
+      "texto": "Aprendí a gestionar mejor mi inventario y a crear una estrategia de marketing que realmente funciona.",
+      "rating": 5
+    }
+  ],
+  "nosotros": {
+    "titulo": "Centro de Negocios Santiago",
+    "subtitulo": "Apoyamos el crecimiento de las micro, pequeñas y medianas empresas de Santiago",
+    "descripcion": "El Centro de Negocios Santiago de SERCOTEC ofrece servicios integrales de apoyo y acompañamiento empresarial con el objetivo de garantizar el correcto funcionamiento, sostenibilidad y eficiencia de los negocios de nuestros clientes.",
+    "stats": [
+      { "valor": "500+", "etiqueta": "Empresas apoyadas" },
+      { "valor": "12", "etiqueta": "Años de experiencia" },
+      { "valor": "98%", "etiqueta": "Satisfacción" },
+      { "valor": "50+", "etiqueta": "Asesores expertos" }
+    ]
+  },
+  "faq": [
+    {
+      "id": 1,
+      "pregunta": "¿Quién puede acceder a los servicios?",
+      "respuesta": "Cualquier micro, pequeña o mediana empresa de la Región Metropolitana. Solo debes agendar una cita con nuestro equipo."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Tienen algún costo los servicios?",
+      "respuesta": "La mayoría son gratuitos o de costo reducido gracias al financiamiento de SERCOTEC. Consulta con nuestro equipo para más detalles."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cómo puedo agendar una asesoría?",
+      "respuesta": "Puedes contactarnos por el formulario web, llamando a nuestra oficina, o visitándonos en Manuel Rodríguez Sur 749, Santiago."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuánto dura el acompañamiento?",
+      "respuesta": "Varía según cada empresa, desde una sesión diagnóstica única hasta varios meses de seguimiento continuo."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Ofrecen talleres grupales?",
+      "respuesta": "Sí, realizamos talleres periódicos sobre marketing digital, gestión financiera e innovación. Revisa nuestra agenda en redes sociales."
+    }
+  ]
+}
