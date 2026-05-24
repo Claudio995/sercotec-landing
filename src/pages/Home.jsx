@@ -1,27 +1,47 @@
 import ServiceCard from '../components/ServiceCard/ServiceCard'
 import TestimonialCarousel from '../components/TestimonialCarousel/TestimonialCarousel'
-
-const servicioEjemplo = {
-  id: 1,
-  titulo: 'Acompañamiento Preventivo',
-  descripcion: 'Asesorías periódicas para prolongar la vida útil de tu negocio.',
-  imagen: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80'
-}
-
-const testimonios = [
-  { id: 1, nombre: 'María González', empresa: 'Tienda El Rincón', cargo: 'Propietaria', texto: 'Gracias al Centro de Negocios logré ordenar mis finanzas y duplicar mis ventas en 6 meses.', rating: 5 },
-  { id: 2, nombre: 'Carlos Muñoz', empresa: 'Panadería Don Carlos', cargo: 'Gerente', texto: 'El acompañamiento fue clave para digitalizarnos y llegar a nuevos clientes.', rating: 5 },
-  { id: 3, nombre: 'Ana Martínez', empresa: 'Boutique Ana M.', cargo: 'Fundadora', texto: 'Aprendí a gestionar mejor mi inventario y crear una estrategia de marketing real.', rating: 5 }
-]
+import Nosotros from '../components/Nosotros/Nosotros'
+import FAQ from '../components/FAQ/FAQ'
+import useFetch from '../hooks/useFetch'
+import { getServicios, getTestimonios } from '../services/api'
+import styles from './Home.module.css'
 
 function Home() {
+  const { data: servicios, loading: loadServicios } = useFetch(getServicios)
+  const { data: testimonios, loading: loadTestimonios } = useFetch(getTestimonios)
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <div style={{ maxWidth: '400px', marginBottom: '3rem' }}>
-        <ServiceCard {...servicioEjemplo} />
-      </div>
-      <TestimonialCarousel testimonios={testimonios} />
-    </div>
+    <>
+      <Nosotros />
+
+      <section id="servicios" className={styles.servicios} aria-label="Nuestros servicios">
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <span className={styles.badge}>Servicios</span>
+            <h2 className={styles.titulo}>¿En qué te podemos ayudar?</h2>
+          </div>
+          {loadServicios ? (
+            <p className={styles.loading}>Cargando servicios...</p>
+          ) : (
+            <div className={styles.grid}>
+              {servicios?.map(s => <ServiceCard key={s.id} {...s} />)}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section id="testimonios" className={styles.testimonios} aria-label="Testimonios">
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <span className={styles.badge}>Testimonios</span>
+            <h2 className={styles.titulo}>Lo que dicen nuestros clientes</h2>
+          </div>
+          {!loadTestimonios && <TestimonialCarousel testimonios={testimonios || []} />}
+        </div>
+      </section>
+
+      <FAQ />
+    </>
   )
 }
 
