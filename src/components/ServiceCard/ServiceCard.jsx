@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import styles from './ServiceCard.module.css'
 
 function ServiceCard({ id, imagen, titulo, descripcion }) {
@@ -31,4 +32,4 @@ function ServiceCard({ id, imagen, titulo, descripcion }) {
   )
 }
 
-export default ServiceCard
+export default memo (ServiceCard)
