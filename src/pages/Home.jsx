@@ -4,16 +4,16 @@ import Nosotros from '../components/Nosotros/Nosotros'
 import FAQ from '../components/FAQ/FAQ'
 import useFetch from '../hooks/useFetch'
 import { getServicios, getTestimonios } from '../services/api'
+import { serviciosFallback, testimoniosFallback } from '../data/fallback'
 import styles from './Home.module.css'
 
 function Home() {
-  const { data: servicios, loading: loadServicios } = useFetch(getServicios)
-  const { data: testimonios, loading: loadTestimonios } = useFetch(getTestimonios)
+  const { data: servicios, loading: loadServicios } = useFetch(getServicios, serviciosFallback)
+  const { data: testimonios, loading: loadTestimonios } = useFetch(getTestimonios, testimoniosFallback)
 
   return (
     <>
       <Nosotros />
-
       <section id="servicios" className={styles.servicios} aria-label="Nuestros servicios">
         <div className={styles.container}>
           <div className={styles.header}>

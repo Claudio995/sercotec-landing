@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-function useFetch(fetchFn) {
-  const [data, setData] = useState(null)
+function useFetch(fetchFn, fallbackData = null) {
+  const [data, setData] = useState(fallbackData)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
